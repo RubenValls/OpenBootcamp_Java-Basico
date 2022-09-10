@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Introduce el precio sin IVA: ");
+        double precioSinIva = scan.nextDouble();
+        double precioConIva = calcularIVA(precioSinIva);
+        System.out.println("El precio con IVA es: "+precioConIva);
+    }
+
+    static double calcularIVA(double precioSinIva){
+        return precioSinIva*1.21; //IVA España al 21%
+    }
+}
